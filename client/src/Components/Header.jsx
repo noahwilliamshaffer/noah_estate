@@ -2,7 +2,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <header>
+    <header className = 'bg-slate-200 shadow-md' >
+        <div>
         <h1 className = ' font-bold text-sm sm:text-xl flex flex-wrap'>
             <span className = 'text-slate-500'> Shaffer </span>
             <span className = 'text-slate-700'> Estate </span>    
@@ -10,6 +11,9 @@ function Header() {
         <form>
             <input type = "Text" Placeholder = "Search..." />
         </form>
+        
+        </div>
+
         
     </header>
   )
