@@ -1,4 +1,5 @@
 import {FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -13,15 +14,24 @@ function Header() {
           <FaSearch className='text-slate-600 text-lg sm:text-2xl p-2'/>
         </form>
         <ul className = 'flex gap-4'>
-          <li className = 'hidden sm:inline text-slate-700 hover:underline'>
-            Home
-          </li>
-          <li className = 'hidden sm:inline text-slate-700 hover:underline'>
-            About
-          </li>
-          <li className = ' text-slate-700 hover:underline'>
-            Sign In
-          </li>
+          <Link to = '/'> 
+            <li className = 'hidden sm:inline text-slate-700 hover:underline'>
+              Home
+            </li>
+          </Link>
+
+
+
+          <Link to = '/about'> 
+              <li className = 'hidden sm:inline text-slate-700 hover:underline'>
+                About
+              </li>
+          </Link>
+          <Link to = '/SignIn'> 
+            <li className = ' text-slate-700 hover:underline'>
+              Sign In
+            </li>
+            </Link>
         </ul>
       </div>
     </header>
