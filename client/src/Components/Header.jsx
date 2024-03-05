@@ -12,6 +12,17 @@ function Header() {
           <input type="text" placeholder="Search..." className='bg-transparent focus:outline-none w-full px-4 py-1 sm:py-2' />
           <FaSearch className='text-slate-600 text-lg sm:text-2xl p-2'/>
         </form>
+        <ul className = 'flex gap-4'>
+          <li className = 'hidden sm:inline text-slate-700 hover:underline'>
+            Home
+          </li>
+          <li className = 'hidden sm:inline text-slate-700 hover:underline'>
+            About
+          </li>
+          <li className = ' text-slate-700 hover:underline'>
+            Sign In
+          </li>
+        </ul>
       </div>
     </header>
   );
