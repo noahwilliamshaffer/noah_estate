@@ -7,5 +7,5 @@ export const signup = async (req, res) => {
    //this saving takes time so we use await and change function to async
    await newUser.save()
    //201 is for created
-   res.status(201).json("User created successfully");
+   res.status(201).json("User created successfully!");
 }
