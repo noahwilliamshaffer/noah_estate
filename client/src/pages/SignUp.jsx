@@ -34,6 +34,7 @@ export default function SignUp() {
       return;
     }
     setLoading(false); 
+    setError(null);
   } catch (error) {
     setError(error.message);
     setLoading(false);
@@ -60,7 +61,7 @@ export default function SignUp() {
           <span className="text-blue-700">Sign In</span>
         </Link>
       </div>
-      {error && <p className="text-red-500 mt-3">{error}</p>} // Display error message if there's an error from try catch block in handleSubmit function
-    </div>
+      {error && <p className="text-red-500 mt-3">{error}</p>} 
+    </div> // Display error message if there's an error from try catch block in handleSubmit function
   );
 }
