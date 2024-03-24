@@ -1,8 +1,11 @@
+import { set } from 'mongoose';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom if you're using it for routing
 
 export default function SignUp() {
   const [formData, setFormData] = useState({}); // Initialize form data state
+  const [error, setError] = useState(null); // Initialize error state
+  const [loading, setLoading] = useState(false); // Initialize loading state
 
   const handleChange = (e) => {
     setFormData({ 
@@ -14,6 +17,7 @@ export default function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
+    setLoading(true); // Set loading state to true
     const res = await fetch('/api/auth/signup', {
       method: 'POST',
       headers: {
@@ -22,6 +26,13 @@ export default function SignUp() {
       body: JSON.stringify(formData),
     }); // Send a POST request to the server with the form data
     const data = await res.json();
+
+    if (data.success === false) {
+      setError(data.message); // 
+      setLoading(false); 
+      return;
+    }
+    setLoading(false); 
     console.log(data); // Log the response from the server
   };
   console.log(formData); // Log the response from the server
@@ -32,7 +43,10 @@ export default function SignUp() {
         <input type="text" placeholder="Username" className="block border p-3 rounded-lg" id="username" onChange={handleChange} />
         <input type="email" placeholder="Email" className="block border p-3 rounded-lg" id="email" onChange={handleChange} />
         <input type="password" placeholder="Password" className="block border p-3 rounded-lg" id="password" onChange={handleChange} />
-        <button type="submit" className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>Sign Up</button>
+        <button disabled = {loading} type="submit" className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 
+        disabled:opacity-80'>
+          {loading ? 'Loading...' : 'Sign Up'}
+           </button>
       </form>
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
