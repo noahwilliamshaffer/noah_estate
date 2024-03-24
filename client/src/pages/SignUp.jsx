@@ -1,11 +1,12 @@
 import { set } from 'mongoose';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom if you're using it for routing
+import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom if you're using it for routing
 
 export default function SignUp() {
   const [formData, setFormData] = useState({}); // Initialize form data state
   const [error, setError] = useState(null); // Initialize error state
   const [loading, setLoading] = useState(false); // Initialize loading state
+  const navigate = useNavigate(); // Initialize navigate function from useNavigate hook
 
   const handleChange = (e) => {
     setFormData({ 
@@ -35,6 +36,7 @@ export default function SignUp() {
     }
     setLoading(false); 
     setError(null);
+    navigate('/SignIn');
   } catch (error) {
     setError(error.message);
     setLoading(false);
@@ -57,7 +59,7 @@ export default function SignUp() {
       </form>
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
-        <Link to='/sign-in'>
+        <Link to='/SignIn'>
           <span className="text-blue-700">Sign In</span>
         </Link>
       </div>
