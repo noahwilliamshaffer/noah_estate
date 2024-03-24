@@ -20,7 +20,7 @@ export default function SignUp() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    });
+    }); // Send a POST request to the server with the form data
     const data = await res.json();
     console.log(data); // Log the response from the server
   };
