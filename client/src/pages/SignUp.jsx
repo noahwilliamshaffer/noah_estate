@@ -17,6 +17,7 @@ export default function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
+    try{
     setLoading(true); // Set loading state to true
     const res = await fetch('/api/auth/signup', {
       method: 'POST',
@@ -33,9 +34,14 @@ export default function SignUp() {
       return;
     }
     setLoading(false); 
-    console.log(data); // Log the response from the server
+  } catch (error) {
+    setError(error.message);
+    setLoading(false);
+    }
   };
   console.log(formData); // Log the response from the server
+
+
   return (
     <div className='p-3 max-w-lg'>
       <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
@@ -54,6 +60,7 @@ export default function SignUp() {
           <span className="text-blue-700">Sign In</span>
         </Link>
       </div>
+      {error && <p className="text-red-500 mt-3">{error}</p>} // Display error message if there's an error from try catch block in handleSubmit function
     </div>
   );
 }
