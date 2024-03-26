@@ -1,12 +1,18 @@
 import { set } from 'mongoose';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom if you're using it for routing
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  SignInStart, 
+  SignInSuccess, 
+  SignInFailure
+} from '../redux/user/userSlice';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({}); // Initialize form data state
-  const [error, setError] = useState(null); // Initialize error state
-  const [loading, setLoading] = useState(false); // Initialize loading state
+  const {loading, error} = useSelector((state) => state.user); // Destructure loading and error state from user slice
   const navigate = useNavigate(); // Initialize navigate function from useNavigate hook
+ const dispatch = useDispatch(); // Initialize dispatch function from useDispatch hook
 
   const handleChange = (e) => {
     setFormData({ 
@@ -19,7 +25,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
     try{
-    setLoading(true); // Set loading state to true
+   dispatch(SignInStart());
     const res = await fetch('/api/auth/signin', {
       method: 'POST',
       headers: {
@@ -30,12 +36,10 @@ export default function SignIn() {
     const data = await res.json();
 
     if (data.success === false) {
-      setError(data.message); // 
-      setLoading(false); 
+      dispatch(SignInFailure(data.message)); //
       return;
     }
-    setLoading(false); 
-    setError(null);
+    dispatch(SignInSuccess(data));
     navigate('/');
   } catch (error) {
     setError(error.message);
