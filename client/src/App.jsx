@@ -17,16 +17,12 @@ export default function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/signin" element={<SignIn />} />
+                <Route element = {<PrivateRoute />} >  
 
-                {/* Protect the Profile route */}
-                <Route 
-                    path="/profile" 
-                    element={
-                        <PrivateRoute>
-                            <Profile />
-                        </PrivateRoute>
-                    } 
-                />
+                <Route path="/Profile" element={<Profile />} />
+
+                </Route>
+            
             </Routes>
         </BrowserRouter>
     );
