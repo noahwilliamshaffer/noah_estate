@@ -13,12 +13,7 @@ export default function Profile() {
   const  [fileUploadError, setFileUploadError] = useState
   (false); // Corrected syntax
   const [formData, setFormData] = useState({});
- // console.log(file);
-  //console.log(filePerc);
-console.log(formData);
-console.log(filePerc);
-console.log(fileUploadError);
-
+ 
   useEffect(() => {
     if(file){ 
       handleFileUpload();
@@ -69,10 +64,23 @@ console.log(fileUploadError);
         />
         <img
           onClick={() => fileRef.current.click()}
-          src={currentUser.avatar || 'default-avatar.png'} // Fallback to a default image if no avatar
+          src={formData.avatar || currentUser.avatar} // Fallback to a default image if no avatar
           alt="profile"
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
         />
+<p className = 'text-sm self-center'>
+  {fileUploadError ? (
+    <span className='text-red-700'>Error image upload (image must be less than two megab </span>
+  ) : (
+    filePerc > 0 && filePerc < 100 ? (
+      <span className='text-slate-700'>Uploading {filePerc}%</span>
+    ) : (
+      <span className='text-green-700'>Upload complete!</span>
+    )
+  )}
+</p>
+
+
         <input type="text" placeholder='Username' id='username' name='username' className='border p-3' />
         <input type="text" placeholder='Email' id='email' name='email' className='border p-3' />
         <input type="password" placeholder='Password' id='password' name='password' className='border p-3' />
