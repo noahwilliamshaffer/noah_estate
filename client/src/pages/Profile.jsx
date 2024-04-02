@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { getStorage, ref, uploadBytesResumable } from 'firebase/storage';
+import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
 import { get } from 'mongoose';
 import { app } from '../firebase';
 // Ensure Firebase is initialized outside this component
@@ -10,8 +10,14 @@ export default function Profile() {
   const { currentUser } = useSelector((state) => state.user);
   const [file, setFile] = useState(undefined); // Initialize with null for clarity
   const [filePerc, setFilePerc] = useState(0);
-  console.log(file);
-  console.log(filePerc);
+  const  [fileUploadError, setFileUploadError] = useState
+  (false); // Corrected syntax
+  const [formData, setFormData] = useState({});
+ // console.log(file);
+  //console.log(filePerc);
+console.log(formData);
+console.log(filePerc);
+console.log(fileUploadError);
 
   useEffect(() => {
     if(file){ 
@@ -19,20 +25,36 @@ export default function Profile() {
     }
   }, [file]);
 
+  //we have a file called 
   const handleFileUpload = () => {
     const storage = getStorage(app);
     const fileName =  new Date().getTime() + file.name;
     const storageRef = ref(storage, fileName);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
+    //tracks changed and gives snapshot
     uploadTask.on('state_changed',  
     (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       //console.log('Upload is ' + progress + '% done');
       setFilePerc(Math.round(progress));
     },
+    (error) => {
+      setFileUploadError(true);
+    },
+
+    () => {
+    getDownloadURL(uploadTask.snapshot.ref).then
+    ((downloadURL) => setFormData({...formData, avatar: downloadURL}));
+
+  }
+  );
+  };
     
-    )};
+    
+   
+
+ 
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
