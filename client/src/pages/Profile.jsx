@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import { getStorage, ref, uploadBytesResumable } from 'firebase/storage';
+// Ensure Firebase is initialized outside this component
 
 export default function Profile() {
+  const fileRef = useRef(null);
   const { currentUser } = useSelector((state) => state.user);
+  const [file, setFile] = useState(undefined); // Initialize with null for clarity
+  const [filePerc, setFilePerc] = useState(0);
+  console.log(file);
 
-  if (!currentUser) {
-    return <div>Loading user data...</div>;
-  }
+
+ 
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form className='flex flex-col gap-4'>
-        <img src={currentUser.avatar} alt="profile" className='rounded-full h-24 w-24 object-cover cursor-pointer self-center'/>
+        <input
+          onChange={(e) => setFile(e.target.files[0])} 
+          type="file"
+          ref={fileRef}
+          hidden
+          accept='image/*'
+        />
+        <img
+          onClick={() => fileRef.current.click()}
+          src={currentUser.avatar || 'default-avatar.png'} // Fallback to a default image if no avatar
+          alt="profile"
+          className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
+        />
         <input type="text" placeholder='Username' id='username' name='username' className='border p-3' />
         <input type="text" placeholder='Email' id='email' name='email' className='border p-3' />
         <input type="password" placeholder='Password' id='password' name='password' className='border p-3' />
