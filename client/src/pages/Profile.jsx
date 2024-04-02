@@ -11,7 +11,7 @@ export default function Profile() {
   const [file, setFile] = useState(undefined); // Initialize with null for clarity
   const [filePerc, setFilePerc] = useState(0);
   console.log(file);
-
+  console.log(filePerc);
 
   useEffect(() => {
     if(file){ 
@@ -28,7 +28,8 @@ export default function Profile() {
     uploadTask.on('state_changed',  
     (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
+      //console.log('Upload is ' + progress + '% done');
+      setFilePerc(Math.round(progress));
     },
     
     )};
