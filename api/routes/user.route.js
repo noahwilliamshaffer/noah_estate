@@ -5,7 +5,7 @@ import { verifyToken } from '../utils/verifyUser.js';
 const router = express.Router();
 
 router.get('/test', test);
-router.get('/Update/:id', verifyToken, updateUser); 
+router.post('/update/:id', verifyToken, updateUser); 
 
 //create token inside the cookie to authenticate the user
 
