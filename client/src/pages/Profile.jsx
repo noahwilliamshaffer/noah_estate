@@ -46,7 +46,10 @@ export default function Profile() {
   );
   };
     
-    
+  const HandleChange = (e) => {
+
+    setFormData({...formData, [e.target.name]: e.target.value});
+  }
    
 
  
@@ -81,9 +84,12 @@ export default function Profile() {
 </p>
 
 
-        <input type="text" placeholder='Username' id='username' name='username' className='border p-3' />
-        <input type="text" placeholder='Email' id='email' name='email' className='border p-3' />
-        <input type="password" placeholder='Password' id='password' name='password' className='border p-3' />
+        <input type="text" placeholder='Username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={HandleChange}
+        
+        
+        />
+        <input type="text" placeholder='Email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={HandleChange}/>
+        <input type="password" placeholder='Password' id='password' name='password' className='border p-3' onChange={HandleChange} />
         <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>Update</button>
       </form>  
       <div className='flex justify-between mt-5'>
