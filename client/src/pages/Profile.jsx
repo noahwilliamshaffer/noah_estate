@@ -10,9 +10,9 @@ export default function Profile() {
   const { currentUser } = useSelector((state) => state.user);
   const [file, setFile] = useState(undefined); // Initialize with null for clarity
   const [filePerc, setFilePerc] = useState(0);
-  const  [fileUploadError, setFileUploadError] = useState
-  (false); // Corrected syntax
+  const  [fileUploadError, setFileUploadError] = useState(false);
   const [formData, setFormData] = useState({});
+  console.log(formData);
  
   useEffect(() => {
     if(file){ 
@@ -46,7 +46,7 @@ export default function Profile() {
   );
   };
     
-  const HandleChange = (e) => {
+  const handleChange = (e) => {
 
     setFormData({...formData, [e.target.name]: e.target.value});
   }
@@ -84,12 +84,12 @@ export default function Profile() {
 </p>
 
 
-        <input type="text" placeholder='Username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={HandleChange}
+        <input type="text" placeholder='Username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={handleChange}
         
         
         />
-        <input type="text" placeholder='Email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={HandleChange}/>
-        <input type="password" placeholder='Password' id='password' name='password' className='border p-3' onChange={HandleChange} />
+        <input type="text" placeholder='Email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={handleChange}/>
+        <input type="password" placeholder='Password' id='password' name='password' className='border p-3' onChange={handleChange} />
         <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>Update</button>
       </form>  
       <div className='flex justify-between mt-5'>
