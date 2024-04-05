@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
 import { get } from 'mongoose';
 import { app } from '../firebase';
-import { updateUserFailure, updateUserStart } from '../redux/user/userSlice';
+import { updateUserFailure, updateUserStart, updateUserSuccess } from '../redux/user/userSlice';
 // Ensure Firebase is initialized outside this component
 import { useDispatch } from 'react-redux';
 
@@ -15,6 +15,8 @@ export default function Profile() {
   const  [fileUploadError, setFileUploadError] = useState(false);
   const [formData, setFormData] = useState({}); 
  const dispatch = useDispatch();
+ console.log('currentUser:', currentUser);
+
   useEffect(() => {
     if(file){ 
       handleFileUpload();
@@ -51,7 +53,8 @@ export default function Profile() {
   const handleChange = (e) => {
 
     setFormData({...formData, [e.target.name]: e.target.value});
-  }
+
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,12 +69,16 @@ export default function Profile() {
             body: JSON.stringify(formData),
         });
         const data = await res.json();
+        console.log(data);
         if (data.success === false) {
+          console.log(data);
             dispatch(updateUserFailure(data.message));
             return;
         }
+        console.log(data);
         dispatch(updateUserSuccess(data));
     } catch (error) {
+      console.log(data);
         dispatch(updateUserFailure(error.message));
     }
 };
@@ -108,12 +115,11 @@ export default function Profile() {
 </p>
 
 
-        <input type="text" placeholder='Username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={handleChange}
-        
-        
+        <input type="username" placeholder='username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={handleChange}
+  
         />
-        <input type="text" placeholder='Email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={handleChange}/>
-        <input type="password" placeholder='Password' id='password' name='password' className='border p-3' onChange={handleChange} />
+        <input type="email" placeholder='email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={handleChange}/>
+        <input type="password" placeholder='password' id='password' name='password' className='border p-3' onChange={handleChange} />
         <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>Update</button>
       </form>  
       <div className='flex justify-between mt-5'>
