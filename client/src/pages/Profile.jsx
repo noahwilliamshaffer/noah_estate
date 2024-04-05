@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
 import { get } from 'mongoose';
 import { app } from '../firebase';
+import { updateUserFailure, updateUserStart } from '../redux/user/userSlice';
 // Ensure Firebase is initialized outside this component
+import { useDispatch } from 'react-redux';
 
 export default function Profile() {
   const fileRef = useRef(null);
@@ -11,9 +13,8 @@ export default function Profile() {
   const [file, setFile] = useState(undefined); // Initialize with null for clarity
   const [filePerc, setFilePerc] = useState(0);
   const  [fileUploadError, setFileUploadError] = useState(false);
-  const [formData, setFormData] = useState({});
-  console.log(formData);
- 
+  const [formData, setFormData] = useState({}); 
+ const dispatch = useDispatch();
   useEffect(() => {
     if(file){ 
       handleFileUpload();
@@ -26,6 +27,7 @@ export default function Profile() {
     const fileName =  new Date().getTime() + file.name;
     const storageRef = ref(storage, fileName);
     const uploadTask = uploadBytesResumable(storageRef, file);
+
 
     //tracks changed and gives snapshot
     uploadTask.on('state_changed',  
@@ -50,14 +52,36 @@ export default function Profile() {
 
     setFormData({...formData, [e.target.name]: e.target.value});
   }
-   
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+    try {
+        dispatch(updateUserStart());
+        const res = await fetch(`/api/user/update/${currentUser._id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        if (data.success === false) {
+            dispatch(updateUserFailure(data.message));
+            return;
+        }
+        dispatch(updateUserSuccess(data));
+    } catch (error) {
+        dispatch(updateUserFailure(error.message));
+    }
+};
 
  
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
-      <form className='flex flex-col gap-4'>
+      <form onSubmit = {handleSubmit} className='flex flex-col gap-4'>
         <input
           onChange={(e) => setFile(e.target.files[0])} 
           type="file"
