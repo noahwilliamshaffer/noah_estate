@@ -120,11 +120,13 @@ export default function Profile() {
         />
         <input type="email" placeholder='email' defaultValue={currentUser.email} id='email' name='email' className='border p-3' onChange={handleChange}/>
         <input type="password" placeholder='password' id='password' name='password' className='border p-3' onChange={handleChange} />
-        <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>Update</button>
+        <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>{loading ? 'Loading...' : 'update'}</button>
       </form>  
       <div className='flex justify-between mt-5'>
         <span className='text-red-700 cursor-pointer'>Delete account</span>
         <span className='text-red-700 cursor-pointer'>Sign out</span>
+
+        <P className = 'text-red-700 mt-5'> {error ? error : '' </P>
       </div>  
     </div>
   );
