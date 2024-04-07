@@ -125,8 +125,8 @@ export default function Profile() {
       <div className='flex justify-between mt-5'>
         <span className='text-red-700 cursor-pointer'>Delete account</span>
         <span className='text-red-700 cursor-pointer'>Sign out</span>
-        {error && <span className='text-red-700 mt-5'>{error}</span>}
-      </div>  c 
+        <p className='text-red-700 mt-5'>{error ? error : ''}</p>
+      </div>  
     </div>
   );
 }
