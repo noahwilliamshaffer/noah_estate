@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 
 export default function Profile() {
   const fileRef = useRef(null);
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser, loading, error } = useSelector((state) => state.user);
   const [file, setFile] = useState(undefined); // Initialize with null for clarity
   const [filePerc, setFilePerc] = useState(0);
   const  [fileUploadError, setFileUploadError] = useState(false);
@@ -125,9 +125,8 @@ export default function Profile() {
       <div className='flex justify-between mt-5'>
         <span className='text-red-700 cursor-pointer'>Delete account</span>
         <span className='text-red-700 cursor-pointer'>Sign out</span>
-
-        <P className = 'text-red-700 mt-5'> {error ? error : '' </P>
-      </div>  
+        {error && <span className='text-red-700 mt-5'>{error}</span>}
+      </div>  c 
     </div>
   );
 }
