@@ -183,7 +183,7 @@ export default function Profile() {
         </span>
       </div>
         <p className='text-red-700 mt-5'>{error ? error : ''}</p>
-        <p className='text-red-700 mt-5'>{error ? error : ''}</p>
+        <p className='text-green-700 mt-5'>{updateUserSuccess ? 'User us updated succsefully!' : ''}</p>
       </div>  
   );
 }
