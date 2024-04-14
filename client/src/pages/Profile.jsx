@@ -126,6 +126,40 @@ export default function Profile() {
       dispatch(deleteUserFailure(data.message));
     }
   };
+  const handleShowListings = async () => {
+    try {
+      setShowListingsError(false);
+      const res = await fetch(`/api/user/listings/${currentUser._id}`);
+      const data = await res.json();
+      if (data.success === false) {
+        setShowListingsError(true);
+        return;
+      }
+
+      setUserListings(data);
+    } catch (error) {
+      setShowListingsError(true);
+    }
+  };
+
+  const handleListingDelete = async (listingId) => {
+    try {
+      const res = await fetch(`/api/listing/delete/${listingId}`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        console.log(data.message);
+        return;
+      }
+
+      setUserListings((prev) =>
+        prev.filter((listing) => listing._id !== listingId)
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
 
  
@@ -184,6 +218,7 @@ export default function Profile() {
       </div>
         <p className='text-red-700 mt-5'>{error ? error : ''}</p>
         <p className='text-green-700 mt-5'>{updateUserSuccess ? 'User us updated succsefully!' : ''}</p>
+        <button onClick={handleShowListings} className='bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95'>Sign out</button>
       </div>  
   );
 }
