@@ -9,6 +9,7 @@ import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute'; // Ensure PrivateRoute is correctly imported
 import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
+import Listing from './pages/Listing';
 
 export default function App() {
     return (
@@ -19,6 +20,8 @@ export default function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/signin" element={<SignIn />} />
+                <Route path='/listing/:listingId' element={<Listing />} />
+
         
                 <Route element = {<PrivateRoute />} >  
 
