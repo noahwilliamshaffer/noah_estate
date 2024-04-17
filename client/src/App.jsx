@@ -19,13 +19,16 @@ export default function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/signin" element={<SignIn />} />
+        
                 <Route element = {<PrivateRoute />} >  
 
                 <Route path="/Profile" element={<Profile />} />
-                <Route path="/create-listing" element={<CreateListing />}  />
-                <Route path="/update-listing" element={<UpdateListing/>} />
-
-                </Route>
+                <Route path='/create-listing' element={<CreateListing />} />
+          <Route
+            path='/update-listing/:listingId'
+            element={<UpdateListing />}
+          />
+        </Route>
             
             </Routes>
         </BrowserRouter>
