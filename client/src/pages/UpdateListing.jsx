@@ -156,7 +156,7 @@ export default function CreateListing() {
   return (
     <main className='p-3 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>
-        Create a Listing
+        Update a Listing
       </h1>
       <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col gap-4 flex-1'>
@@ -361,7 +361,7 @@ export default function CreateListing() {
             disabled={loading || uploading}
             className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
-            {loading ? 'Creating...' : 'Create listing'}
+            {loading ? 'Updating...' : 'Update Listing'}
           </button>
           {error && <p className='text-red-700 text-sm'>{error}</p>}
         </div>
