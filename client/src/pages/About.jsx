@@ -10,13 +10,13 @@ export default function About() {
       <p className='mb-4 text-slate-700'>
         You can message me for website inquiries, and a free call to describe your design. 
         My phone is <a href="tel:+19414519208" className="text-blue-500 hover:text-blue-700">941-451-9208</a> and my email is 
-        <a href="mailto:noahwilliamshaffer@gmail.com" className="text-blue-500 hover:text-blue-700">noahwilliamshaffer@gmail.com</a>.
+        <a href="mailto: noahwilliamshaffer@gmail.com" className="text-blue-500 hover:text-blue-700"> noahwilliamshaffer@gmail.com</a>.
       </p>
       <p className='mb-4 text-slate-700'>
         The code for this project amongst several other projects is available on my GitHub at 
-        <a href="https://github.com/noahwilliamshaffer" className="text-blue-500 hover:text-blue-700">https://github.com/noahwilliamshaffer</a>.
+        <a href="https://github.com/noahwilliamshaffer " className="text-blue-500 hover:text-blue-700"> https://github.com/noahwilliamshaffer</a>.
       </p>
-      
+
     </div>
   );
 }
