@@ -243,7 +243,7 @@ export default function Profile() {
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
       <button onClick={handleShowListings} className='text-green-700 w-full'>
-        Show Listings
+        Show Listings 
       </button>
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
