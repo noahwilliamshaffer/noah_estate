@@ -40,5 +40,5 @@ function Header2() {
   );
 }
 
-export default Header; // Corrected export
+export default Header2; // Corrected export
 
