@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
-    "start": "node api/index.js"
+    "start": "node api/index.js",
+    "build": "mpm install && npm install --prefix client && npm run build --prefix client"
+
   },
   "keywords": [],
   "author": "",
@@ -21,3 +23,4 @@
     "nodemon": "^3.1.0"
   }
 }
+
