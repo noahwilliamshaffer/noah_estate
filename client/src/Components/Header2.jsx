@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'; // Corrected import
 
 
-function Header() {
+function Header2() {
   const { currentUser } = useSelector(state => state.user); // Corrected function name
   return (
     <header className='bg-slate-300 shadow-md'>
