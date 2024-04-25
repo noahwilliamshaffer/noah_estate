@@ -56,10 +56,10 @@ export default function Home() {
           place with ease
         </h1>
         <div className='text-gray-400 text-xs sm:text-sm'>
-          Sahand Estate is the best place to find your next perfect place to
-          live.
+        An example of what of a potential website I could arrange for you.
           <br />
-          We have a wide range of properties for you to choose from.
+          Users can upload and post properties from their google accounts and messege each other for inquiries. 
+          
         </div>
         <Link
           to={'/search'}
