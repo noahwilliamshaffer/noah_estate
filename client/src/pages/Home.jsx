@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
-import ListingItem from '../Components/ListingItem';
+import ListingItem from '../components/ListingItem';
 
 export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
@@ -59,7 +59,7 @@ export default function Home() {
         An example of what of a potential website I could arrange for you.
           <br />
           Users can upload and post properties from their google accounts and messege each other for inquiries. 
-          
+
         </div>
         <Link
           to={'/search'}
