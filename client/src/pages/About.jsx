@@ -29,6 +29,16 @@ export default function About() {
               <li>Updated inventory spreadsheets for IT asset management.</li>
             </ul>
           </div>
+          <div>
+            <h3 className="text-xl text-slate-800 font-semibold">LEAD LANDSCAPER, Gene Dieble Landscaping </h3>
+            <p className="text-slate-600">MARCH 2020 -AUGUST 2021, DUBOIS, P.A.</p>
+            <ul className="list-disc list-inside text-slate-600">
+              <li>Managed and oversaw landscaping projects directly under the owner.</li>
+              <li>Maintained high quality standards for project execution.</li>
+              <li>Coordinated team efforts and facilitated effective collaboration.</li>
+            </ul>
+          </div>
+
 
           {/* Other experiences can be added in similar div blocks */}
         </div>
