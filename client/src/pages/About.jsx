@@ -12,7 +12,7 @@ export default function About() {
         <h2 className="text-2xl font-semibold mb-4 text-slate-700">Experience</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="text-xl text-slate-800 font-semibold">Manager Coppola</h3>
+            <h3 className="text-xl text-slate-800 font-semibold">MANAGER, Coppola</h3>
             <p className="text-slate-600">July 2023 - Present, Venice Florida</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Supervise staff and associated workers.</li>
@@ -20,8 +20,16 @@ export default function About() {
               <li>Work closely with the owner and keep him informed while out of the country.</li>
             </ul>
           </div>
+          <div>
+            <h3 className="text-xl text-slate-800 font-semibold">IT SUPPORT INTERN, Chevron</h3>
+            <p className="text-slate-600">MAY 2022 - AUGUST 2023, HOUSTON TX</p>
+            <ul className="list-disc list-inside text-slate-600">
+              <li>Assisted with the migration of data systems to Microsoft Azure's cloud platform.</li>
+              <li>Enhanced helpdesk service efficiency.</li>
+              <li>Updated inventory spreadsheets for IT asset management.</li>
+            </ul>
+          </div>
 
-          
           {/* Other experiences can be added in similar div blocks */}
         </div>
       </div>
