@@ -81,6 +81,7 @@ export default function About() {
 
           <p className="text-slate-600">PROJECTS </p>
             <ul className="list-disc list-inside text-slate-600">
+            <li> <a href="https://github.com/noahwilliamshaffer/noah_estate"> </a>1.  Link to this project</li>
               <li> <a href="https://gitlab.com/cop-4521-project-krause-shaffer/ProjectFiles"> </a>1.  User preference Article Curator Python flask nginix gnunicorn auth0 sql fullstack</li>
               <li> <a href="https://github.com/fsu-fall2022-capstone/Project-Group-2"> 2. Swift fitness app</a> </li>
               <li> <a href="https://github.com/noahwilliamshaffer/Ecommerce-in-C_.NET/tree/main/Ecommerce%20App/TaskManagement"> 2. Ecomerce app in C</a> </li>
