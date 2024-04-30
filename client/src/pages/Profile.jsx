@@ -133,32 +133,33 @@ export default function Profile() {
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
-      <form onSubmit = {handleSubmit} className='flex flex-col gap-4'>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
-          onChange={(e) => setFile(e.target.files[0])} 
-          type="file"
+          onChange={(e) => setFile(e.target.files[0])}
+          type='file'
           ref={fileRef}
           hidden
           accept='image/*'
         />
         <img
           onClick={() => fileRef.current.click()}
-          src={formData.avatar || currentUser.avatar} // Fallback to a default image if no avatar
-          alt="profile"
+          src={formData.avatar || currentUser.avatar}
+          alt='profile'
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
         />
-<p className = 'text-sm self-center'>
-  {fileUploadError ? (
-    <span className='text-red-700'>Error image upload (image must be less than two megab </span>
-  ) : (
-    filePerc > 0 && filePerc < 100 ? (
-      <span className='text-slate-700'>Uploading {filePerc}%</span>
-    ) : (
-      <span className='text-green-700'>Upload complete!</span>
-    )
-  )}
-</p>
-
+        <p className='text-sm self-center'>
+          {fileUploadError ? (
+            <span className='text-red-700'>
+              Error Image upload (image must be less than 2 mb)
+            </span>
+          ) : filePerc > 0 && filePerc < 100 ? (
+            <span className='text-slate-700'>{`Uploading ${filePerc}%`}</span>
+          ) : filePerc === 100 ? (
+            <span className='text-green-700'>Image successfully uploaded!</span>
+          ) : (
+            ''
+          )}
+        </p>
 
         <input type="username" placeholder='username' defaultValue={currentUser.username } id='username' name='username' className='border p-3' onChange={handleChange}
   
