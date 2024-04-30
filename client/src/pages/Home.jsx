@@ -7,6 +7,10 @@ import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
 import ListingItem from '../components/ListingItem';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
 export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
   const [saleListings, setSaleListings] = useState([]);

@@ -10,6 +10,7 @@ import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing';
 import Search from './pages/Search';
+import AppDescription from './pages/AppDescription.jsx';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/AppDescription' element={<AppDescription />} />
         <Route path='/SignIn' element={<SignIn />} />
         <Route path='/SignUp' element={<SignUp />} />
         <Route path='/about' element={<About />} />
