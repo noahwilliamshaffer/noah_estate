@@ -86,20 +86,18 @@ export default function About() {
               <li> <a href="https://github.com/noahwilliamshaffer/Ecommerce-in-C_.NET/tree/main/Ecommerce%20App/TaskManagement"> 2. Ecomerce app in C</a> </li>
               <li> <a href="https://github.com/noahwilliamshaffer/Project3"> 3.Fat32 in C</a> </li>
               <li> <a href="https://github.com/noahwilliamshaffer/Project2"> 4. Elevator app in C</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/Project1"> 5. I/O redirection, background Piping, and background processing in C</a> </li>            
-              <li> <a href=""> 2. Ecomerce app in C</a> </li>
-              <li> <a href=""> 2. Ecomerce app in C</a> </li>
-              <li> <a href=""> 2. Ecomerce app in C</a> </li>
-              <li> <a href=""> 2. Ecomerce app in C</a> </li>
-              <li> <a href=""> 2. Ecomerce app in C</a> </li>
-              <li> 3. Django deployment through ELB </li>
-              <li> 4. Kineses Firehose solution for ingesting web traffic</li>
-              <li> 5. CI pipeline in Jenkins with Git and Maven integration</li>
-              <li>6. Cloudformation/Terraform/Ansible Web Applications</li>
-              <li>7. Custom Cloudwatch Monitoring with Lambda</li>
-              <li>8. Node.js lambda functions when files are uploaded to S3.</li>
-              <li>9. Basic EKS cluster/guest book application </li>
-              <li> 10. Chef cookbook </li>
+              <li> <a href="https://github.com/noahwilliamshaffer/Project1"> 5. I/O redirection, background Piping, and background processing in C</a> </li>   
+              <li> <a href="https://github.com/noahwilliamshaffer/Project1"> 6. Machine learning in C</a> </li>
+              <li> <a href="https://github.com/noahwilliamshaffer/ShellScripts "> 7. Some basic shell scripts</a> </li> 
+              <li> <a href="https://github.com/noahwilliamshaffer/Pandas-Python"> 8. Visualization of data in python pandas</a> </li>     
+              <li> 9. Django deployment through ELB </li>
+              <li> 10. Kineses Firehose solution for ingesting web traffic</li>
+              <li> 11. CI pipeline in Jenkins with Git and Maven integration</li>
+              <li>12. Cloudformation/Terraform/Ansible Web Applications</li>
+              <li>13. Custom Cloudwatch Monitoring with Lambda</li>
+              <li>14. Node.js lambda functions when files are uploaded to S3.</li>
+              <li>15. Basic EKS cluster/guest book application </li>
+              <li> 16. Chef cookbook </li>
             </ul>
           </div>
     
