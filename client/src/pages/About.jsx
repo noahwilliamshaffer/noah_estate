@@ -78,29 +78,34 @@ export default function About() {
               <li>Utilized interpersonal skills to foster a supportive and fun community.</li>
             </ul>
           </div>
+            
+    <p className="text-slate-900 font-bold text-xl">PROJECTS</p>
+    <ul className="list-disc list-inside text-slate-600">
+        <li><a href="https://github.com/noahwilliamshaffer/noah_estate"className="opacity-100 hover:opacity-90 transition-opacity duration-300">1. Link to this project</a></li>
+        <li><a href="https://gitlab.com/cop-4521-project-krause-shaffer/ProjectFiles"className="opacity-100 hover:opacity-90 transition-opacity duration-300">1. User preference Article Curator Python flask nginix gnunicorn auth0 sql fullstack</a></li>
+        <li><a href="https://github.com/fsu-fall2022-capstone/Project-Group-2"className="opacity-100 hover:opacity-90 transition-opacity duration-300">2. Swift fitness app</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Ecommerce-in-C_.NET/tree/main/Ecommerce%20App/TaskManagement"className="opacity-100 hover:opacity-90 transition-opacity duration-300">2. Ecommerce app in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Project3"className="opacity-100 hover:opacity-90 transition-opacity duration-300">3. Fat32 in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Project2"className="opacity-100 hover:opacity-90 transition-opacity duration-300">4. Elevator app in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">5. I/O redirection, background Piping, and background processing in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">. Machine learning in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/ShellScripts"className="opacity-100 hover:opacity-90 transition-opacity duration-300">7. Some basic shell scripts</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Pandas-Python"className="opacity-100 hover:opacity-90 transition-opacity duration-300">8. Visualization of data in python pandas</a></li>
+        <li>9. Django deployment through ELB</li>
+        <li>10. Kineses Firehose solution for ingesting web traffic</li>
+        <li>11. CI pipeline in Jenkins with Git and Maven integration</li>
+        <li>12. Cloudformation/Terraform/Ansible Web Applications</li>
+        <li>13. Custom Cloudwatch Monitoring with Lambda</li>
+        <li>14. Node.js lambda functions when files are uploaded to S3.</li>
+        <li>15. Basic EKS cluster/guest book application</li>
+        <li>16. Chef cookbook</li>
+    </ul>
+</div>
 
-          <p className="text-slate-600">PROJECTS </p>
-            <ul className="list-disc list-inside text-slate-600">
-            <li> <a href="https://github.com/noahwilliamshaffer/noah_estate"> </a>1.  Link to this project</li>
-              <li> <a href="https://gitlab.com/cop-4521-project-krause-shaffer/ProjectFiles"> </a>1.  User preference Article Curator Python flask nginix gnunicorn auth0 sql fullstack</li>
-              <li> <a href="https://github.com/fsu-fall2022-capstone/Project-Group-2"> 2. Swift fitness app</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/Ecommerce-in-C_.NET/tree/main/Ecommerce%20App/TaskManagement"> 2. Ecomerce app in C</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/Project3"> 3.Fat32 in C</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/Project2"> 4. Elevator app in C</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/Project1"> 5. I/O redirection, background Piping, and background processing in C</a> </li>   
-              <li> <a href="https://github.com/noahwilliamshaffer/Project1"> 6. Machine learning in C</a> </li>
-              <li> <a href="https://github.com/noahwilliamshaffer/ShellScripts "> 7. Some basic shell scripts</a> </li> 
-              <li> <a href="https://github.com/noahwilliamshaffer/Pandas-Python"> 8. Visualization of data in python pandas</a> </li>     
-              <li> 9. Django deployment through ELB </li>
-              <li> 10. Kineses Firehose solution for ingesting web traffic</li>
-              <li> 11. CI pipeline in Jenkins with Git and Maven integration</li>
-              <li>12. Cloudformation/Terraform/Ansible Web Applications</li>
-              <li>13. Custom Cloudwatch Monitoring with Lambda</li>
-              <li>14. Node.js lambda functions when files are uploaded to S3.</li>
-              <li>15. Basic EKS cluster/guest book application </li>
-              <li> 16. Chef cookbook </li>
-            </ul>
-          </div>
+
+
+          
+  
     
 
 
