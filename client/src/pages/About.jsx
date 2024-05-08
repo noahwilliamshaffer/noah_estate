@@ -88,7 +88,7 @@ export default function About() {
         <li><a href="https://github.com/noahwilliamshaffer/Project3"className="opacity-100 hover:opacity-90 transition-opacity duration-300">3. Fat32 in C</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Project2"className="opacity-100 hover:opacity-90 transition-opacity duration-300">4. Elevator app in C</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">5. I/O redirection, background Piping, and background processing in C</a></li>
-        <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">. Machine learning in C</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">6. Machine learning in C</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/ShellScripts"className="opacity-100 hover:opacity-90 transition-opacity duration-300">7. Some basic shell scripts</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Pandas-Python"className="opacity-100 hover:opacity-90 transition-opacity duration-300">8. Visualization of data in python pandas</a></li>
         <li>9. Django deployment through ELB</li>

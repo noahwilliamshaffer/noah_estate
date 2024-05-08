@@ -27,12 +27,13 @@ const AppDescription = () => {
 
       <h2 className="text-2xl font-semibold mb-4">Deployment and Real-World Application</h2>
       <p className="text-md text-gray-700 mb-4">
-        The app is deployed using the 'render' platform, which exemplifies the deployment process for MERN applications and ensures they are ready for real-world application. This setup not only demonstrates technical proficiency but also a practical understanding of how to bring a full-stack application from conception to a live environment.
+       
+I deployed a MERN stack application on Amazon AWS using MongoDB on EC2 to manage our application's data. The deployment process began by setting up EC2 instances, where I configured the necessary environment, including installing Node.js for the backend and serving the React.js frontend. For the database, I installed MongoDB directly on a separate EC2 instance to ensure efficient data management and scalability. This setup allowed for a controlled and customizable environment, providing the robustness needed for real-world application demands. The entire application was managed through AWS, leveraging EC2's flexibility to handle our web and database servers effectively.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">Conclusion</h2>
       <p className="text-md text-gray-700">
-        The MERN Real Estate Marketplace is more than just a project; it's a comprehensive solution aimed at revolutionizing how real estate transactions are conducted online. It reflects a deep understanding of both the technical and business aspects of web development, making it an ideal showcase for potential employers or clients looking to hire a skilled full-stack developer.
+        The MERN Real Estate Marketplace is more than just a project; it's a comprehensive solution aimed at revolutionizing how real estate transactions are conducted online. As my family is in realestate, I thought this would be a relevant project.  
       </p>
     </div>
   );
