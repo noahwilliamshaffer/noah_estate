@@ -7,7 +7,7 @@ const AppDescription = () => {
 
       <h2 className="text-2xl font-semibold mb-4">Overview</h2>
       <p className="text-md text-gray-700 mb-4">
-        The MERN Real Estate Marketplace is a sophisticated platform designed to modernize the real estate market by integrating full-stack technologies. Built using MongoDB, Express.js, React, and Node.js, this application facilitates seamless interactions between property sellers, buyers, and real estate agents. By leveraging a comprehensive suite of tools and technologies, the platform ensures a user-friendly experience while maintaining high security and efficiency standards.
+       This app is one of many fullstack applications I've built, the difference here being I ensured that the organization of files and the commit log were industry standard for neat presentation. Built using MongoDB, Express.js, React, and Node.js, this application facilitates seamless interactions between property sellers, buyers, and real estate agents. By leveraging a comprehensive suite of tools and technologies, the platform ensures a user-friendly experience while maintaining high security and efficiency standards.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
