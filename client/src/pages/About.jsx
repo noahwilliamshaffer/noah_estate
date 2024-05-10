@@ -31,41 +31,23 @@ export default function About() {
               <li>Work closely with the owner and keep him informed while out of the country.</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xl text-slate-800 font-semibold">IT SUPPORT INTERN, Chevron</h3>
-            <p className="text-slate-600">MAY 2022 - AUGUST 2023, HOUSTON TX</p>
-            <ul className="list-disc list-inside text-slate-600">
-              <li>Assisted with the migration of data systems to Microsoft Azure's cloud platform.</li>
-              <li>Enhanced helpdesk service efficiency.</li>
-              <li>Updated inventory spreadsheets for IT asset management.</li>
-            </ul>
-          </div>
+         
           <div>
             <h3 className="text-xl text-slate-800 font-semibold">LEAD LANDSCAPER, Gene Dieble Landscaping </h3>
             <p className="text-slate-600">MARCH 2021 -AUGUST 2022, DUBOIS, P.A.</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Managed and oversaw landscaping projects directly under the owner.</li>
-              <li>Maintained high quality standards for project execution.</li>
-              <li>Coordinated team efforts and facilitated effective collaboration.</li>
+              <li>Maintained high quality standards, kept coworkers on task </li>
+              
             </ul>
           </div>
 
           <div>
             <h3 className="text-xl text-slate-800 font-semibold"> GOLF COURSE MAINTENANCE, Lemon Bay Golf Club </h3>
-            <p className="text-slate-600">JUNE 2018-NOVEMBER 2020, ENGLEWOOD F.L.</p>
+            <p className="text-slate-600">MARCH 2018 - AUGUST 2020, ENGLEWOOD F.L.</p>
             <ul className="list-disc list-inside text-slate-600">
-              <li>Managed and oversaw landscaping projects directly under the owner.</li>
-              <li>Maintained high quality standards for project execution.</li>
-              <li>Coordinated team efforts and facilitated effective collaboration.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl text-slate-800 font-semibold"> GOLF COURSE MAINTENANCE, Lemon Bay Golf Club </h3>
-            <p className="text-slate-600">JUNE 2018-NOVEMBER 2020, ENGLEWOOD F.L.</p>
-            <ul className="list-disc list-inside text-slate-600">
-              <li>Conducted detailed turf care and equipment management.</li>
-              <li>Enhanced team communication and cooperation to maintain the golf course's standards and efficiency.</li>
+              <li>Did routine landscape maintinence</li>
+              <li>Towed bunkers maintained the greenery</li>
            
             </ul>
           </div>
@@ -73,9 +55,18 @@ export default function About() {
             <h3 className="text-xl text-slate-800 font-semibold"> CAMP COUNSELLOR, CAMP POCONO TRAILS </h3>
             <p className="text-slate-600">JULY 2017 - JANUARY 2019,  POCONO P.A.</p>
             <ul className="list-disc list-inside text-slate-600">
-              <li>Created an inclusive and engaging environment for campers</li>
+              <li>Watched over 8-10 campers day and night</li>
               <li>Coordinated activities and ensured camper safety.</li>
-              <li>Utilized interpersonal skills to foster a supportive and fun community.</li>
+             
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl text-slate-800 font-semibold"> LIFEGUARD, TREASURELAKE COUNTRY CLUB</h3>
+            <p className="text-slate-600">MARCH 2016 -JULY 2016,  POCONO P.A.</p>
+            <ul className="list-disc list-inside text-slate-600">
+              <li>Maintained pool health and snack shack inventory</li>
+              <li>Ensured the saftey of the swimmers</li>
+           
             </ul>
           </div>
             
