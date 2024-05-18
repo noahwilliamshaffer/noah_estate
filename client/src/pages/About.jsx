@@ -14,7 +14,7 @@ export default function About() {
         <div>
           <h3 className="text-xl text-slate-800 font-semibold">Florida State University</h3>
           <p className="text-slate-600">March 2022 - May 2023, Tallahassee FL</p>
-          <p className="text-slate-600">Master's degree at UCF</p>
+          <p className="text-slate-600">B.A. in Computer Science FSU</p>
         </div>
       </div>
       
@@ -72,7 +72,7 @@ export default function About() {
             
     <p className="text-slate-900 font-bold text-xl">PROJECTS</p>
     <ul className="list-disc list-inside text-slate-600">
-        <li><a href="https://github.com/noahwilliamshaffer/noah_estate"className="opacity-100 hover:opacity-90 transition-opacity duration-300">1. Link to this project</a></li>
+        <li><a href="https://github.com/noahwilliamshaffer/noah_estate"className="opacity-100 hover:opacity-90 transition-opacity duration-300">Link to this project</a></li>
         <li><a href="https://gitlab.com/cop-4521-project-krause-shaffer/ProjectFiles"className="opacity-100 hover:opacity-90 transition-opacity duration-300">1. User preference Article Curator Python flask nginix gnunicorn auth0 sql fullstack</a></li>
         <li><a href="https://github.com/fsu-fall2022-capstone/Project-Group-2"className="opacity-100 hover:opacity-90 transition-opacity duration-300">2. Swift fitness app</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Ecommerce-in-C_.NET/tree/main/Ecommerce%20App/TaskManagement"className="opacity-100 hover:opacity-90 transition-opacity duration-300">2. Ecommerce app in C</a></li>
