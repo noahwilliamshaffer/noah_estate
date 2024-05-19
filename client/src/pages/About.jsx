@@ -83,7 +83,7 @@ export default function About() {
         <li><a href="https://github.com/noahwilliamshaffer/ShellScripts"className="opacity-100 hover:opacity-90 transition-opacity duration-300">7. Some basic shell scripts</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Pandas-Python"className="opacity-100 hover:opacity-90 transition-opacity duration-300">8. Visualization of data in python pandas</a></li>
         <li><a href = "https://github.com/noahwilliamshaffer/GoAwsBuckets"></a>9. Reading contents of all Buckets in s3 </li>
-        <li>10. Kineses Firehose solution for ingesting web traffic</li>
+        <li> < a href = "https://main.dx27vj5h6cz5.amplifyapp.com10."> </a>10. Simple aws app created and deployed in minutes </li>
         <li>11. CI pipeline in Jenkins with Git and Maven integration</li>
         <li>12. Cloudformation/Terraform/Ansible Web Applications</li>
         <li>13. Custom Cloudwatch Monitoring with Lambda</li>
