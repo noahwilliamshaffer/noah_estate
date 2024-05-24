@@ -6,15 +6,13 @@ export default function About() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2 text-slate-800">Noah Shaffer</h1>
         <p className="text-md text-slate-500">Sarasota, FL | 941-451-9208</p>
-        <p className="text-md mb-6 text-slate-500">A 24-year-old graduate from Florida State University with extensive experience in data processing and full stack web applications.
-         Experienced in python, flask, nginx, sql, auth0, react, mongo, firebase just to name a few. Currently taking aws courses through UCF while pursuing my masters degree at IUP University </p>
+        <p className="text-md mb-6 text-slate-500">I am a 26-year-old graduate from Florida State University with extensive experience in data processing and full-stack web development. For the past two years, I have been working as a developer at Capital Peak, maintaining proprietary software. I am now eager to transition into cloud architecture and AWS, as I believe this area represents the future of our field.   </p>
       </div>
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-slate-700">Education</h2>
         <div>
           <h3 className="text-xl text-slate-800 font-semibold">Florida State University</h3>
-          <p className="text-slate-600">March 2022 - May 2023, Tallahassee FL</p>
-          <p className="text-slate-600">B.A. in Computer Science FSU</p>
+          <p className="text-slate-600">B.A. in Computer Science FSU, Tallahassee FL</p>
         </div>
       </div>
       
@@ -22,9 +20,20 @@ export default function About() {
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-slate-700">Experience</h2>
         <div className="space-y-4">
+        <div>
+            <h3 className="text-xl text-slate-800 font-semibold"> SOFTWARE DEVELOPER, Peak Capital </h3>
+            <p className="text-slate-600">JANUARY 2022 - PRESENT, BOCA GRANDE FLORIDA</p>
+            <ul className="list-disc list-inside text-slate-600">
+              <li>Software Development and Optimization</li>
+              <li>Ensuring Data Precision and System Reliability</li>
+              <li>Advanced Security Implementation and Regulatory Compliance </li>
+           
+            </ul>
+          </div>
+
           <div>
             <h3 className="text-xl text-slate-800 font-semibold">MANAGER, Coppola</h3>
-            <p className="text-slate-600">July 2023 - Present, Venice Florida</p>
+            <p className="text-slate-600">JULY 2019 - November 2021, VENICE FLORIDA</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Supervise staff and associated workers.</li>
               <li>Account for inventory and coordinate with stockers.</li>
@@ -34,39 +43,11 @@ export default function About() {
          
           <div>
             <h3 className="text-xl text-slate-800 font-semibold">LEAD LANDSCAPER, Gene Dieble Landscaping </h3>
-            <p className="text-slate-600">MARCH 2021 -AUGUST 2022, DUBOIS, P.A.</p>
+            <p className="text-slate-600">MARCH 2016 -AUGUST 2018, DUBOIS, P.A..</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Managed and oversaw landscaping projects directly under the owner.</li>
               <li>Maintained high quality standards, kept coworkers on task </li>
               
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl text-slate-800 font-semibold"> GOLF COURSE MAINTENANCE, Lemon Bay Golf Club </h3>
-            <p className="text-slate-600">MARCH 2018 - AUGUST 2020, ENGLEWOOD F.L.</p>
-            <ul className="list-disc list-inside text-slate-600">
-              <li>Did routine landscape maintinence</li>
-              <li>Towed bunkers maintained the greenery</li>
-           
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl text-slate-800 font-semibold"> CAMP COUNSELLOR, CAMP POCONO TRAILS </h3>
-            <p className="text-slate-600">JULY 2017 - JANUARY 2019,  POCONO P.A.</p>
-            <ul className="list-disc list-inside text-slate-600">
-              <li>Watched over 8-10 campers day and night</li>
-              <li>Coordinated activities and ensured camper safety.</li>
-             
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl text-slate-800 font-semibold"> LIFEGUARD, TREASURELAKE COUNTRY CLUB</h3>
-            <p className="text-slate-600">MARCH 2016 -JULY 2016,  POCONO P.A.</p>
-            <ul className="list-disc list-inside text-slate-600">
-              <li>Maintained pool health and snack shack inventory</li>
-              <li>Ensured the saftey of the swimmers</li>
-           
             </ul>
           </div>
             
@@ -82,14 +63,8 @@ export default function About() {
         <li><a href="https://github.com/noahwilliamshaffer/Project1"className="opacity-100 hover:opacity-90 transition-opacity duration-300">6. Machine learning in C</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/ShellScripts"className="opacity-100 hover:opacity-90 transition-opacity duration-300">7. Some basic shell scripts</a></li>
         <li><a href="https://github.com/noahwilliamshaffer/Pandas-Python"className="opacity-100 hover:opacity-90 transition-opacity duration-300">8. Visualization of data in python pandas</a></li>
-        <li><a href = "https://github.com/noahwilliamshaffer/GoAwsBuckets"></a>9. Reading contents of all Buckets in s3 </li>
-        <li> < a href = "https://main.dx27vj5h6cz5.amplifyapp.com10."> </a>10. Simple aws app created and deployed in minutes </li>
-        <li>11. CI pipeline in Jenkins with Git and Maven integration</li>
-        <li>12. Cloudformation/Terraform/Ansible Web Applications</li>
-        <li>13. Custom Cloudwatch Monitoring with Lambda</li>
-        <li>14. Node.js lambda functions when files are uploaded to S3.</li>
-        <li>15. Basic EKS cluster/guest book application</li>
-        <li>16. Chef cookbook</li>
+        <li><a href ="https://github.com/noahwilliamshaffer/GoAwsBuckets">9. Reading contents of all Buckets in s3 </a></li>
+        
     </ul>
 </div>
 
