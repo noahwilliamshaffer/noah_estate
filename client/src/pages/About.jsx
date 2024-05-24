@@ -22,7 +22,7 @@ export default function About() {
         <div className="space-y-4">
         <div>
             <h3 className="text-xl text-slate-800 font-semibold"> SOFTWARE DEVELOPER, Peak Capital </h3>
-            <p className="text-slate-600">JANUARY 2022 - PRESENT, BOCA GRANDE FLORIDA</p>
+            <p className="text-slate-600">JANUARY 2022 - PRESENT, SARASOTA FLORIDA</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Software Development and Optimization</li>
               <li>Ensuring Data Precision and System Reliability</li>
