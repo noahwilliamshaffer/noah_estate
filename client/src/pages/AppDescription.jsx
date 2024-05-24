@@ -31,10 +31,6 @@ const AppDescription = () => {
 I deployed a MERN stack application on Amazon AWS using MongoDB on EC2 to manage our application's data. The deployment process began by setting up EC2 instances, where I configured the necessary environment, including installing Node.js for the backend and serving the React.js frontend. For the database, I installed MongoDB directly on a separate EC2 instance to ensure efficient data management and scalability. This setup allowed for a controlled and customizable environment, providing the robustness needed for real-world application demands. The entire application was managed through AWS, leveraging EC2's flexibility to handle our web and database servers effectively.
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Conclusion</h2>
-      <p className="text-md text-gray-700">
-        The MERN Real Estate Marketplace is more than just a project; it's a comprehensive solution aimed at revolutionizing how real estate transactions are conducted online. As my family is in realestate, I thought this would be a relevant project.  
-      </p>
     </div>
   );
 };
