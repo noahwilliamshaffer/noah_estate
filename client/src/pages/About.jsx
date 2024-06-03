@@ -21,19 +21,22 @@ export default function About() {
         <h2 className="text-2xl font-semibold mb-4 text-slate-700">Experience</h2>
         <div className="space-y-4">
         <div>
-            <h3 className="text-xl text-slate-800 font-semibold"> SOFTWARE DEVELOPER, Peak Capital </h3>
-            <p className="text-slate-600">JANUARY 2022 - PRESENT, SARASOTA FLORIDA</p>
+            <h3 className="text-xl text-slate-800 font-semibold">MACHINE LEARNING AND DATA ANALYST  PEAK CAPITAL </h3>
+            <p className="text-slate-600">JANUARY 2022 - PRESENT,    SARASOTA,  FLORIDA</p>
             <ul className="list-disc list-inside text-slate-600">
-              <li>Software Development and Optimization</li>
-              <li>Ensuring Data Precision and System Reliability</li>
-              <li>Advanced Security Implementation and Regulatory Compliance </li>
+              <li>Developed Predictive Models: Created models that identified high-potential investment opportunities.</li>
+              <li>Automated Data Analysis: Designed and implemented automated data pipelines.</li>
+              <li>Data Visualization: Developed interactive dashboards and visual reports.</li>
+              <li>Risk Reduction: Integrated machine learning models into trading strategies, reducing risk exposure.</li>
+              <li>Teamwork: Collaborated with the trading team to tailor models to specific market conditions, enhancing responsiveness and agility.</li>
+              <li>Improved Agility: Implemented real-time data analysis frameworks using Spark, enabling swift reactions to market changes. </li>
            
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl text-slate-800 font-semibold">MANAGER, Coppola</h3>
-            <p className="text-slate-600">JULY 2019 - November 2021, VENICE FLORIDA</p>
+            <h3 className="text-xl text-slate-800 font-semibold">MANAGER COPPOLA’S</h3>
+            <p className="text-slate-600">JANUARY 2019 - DECEMBER 2021, VENICE FLORIDA</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Supervise staff and associated workers.</li>
               <li>Account for inventory and coordinate with stockers.</li>
@@ -42,8 +45,8 @@ export default function About() {
           </div>
          
           <div>
-            <h3 className="text-xl text-slate-800 font-semibold">LEAD LANDSCAPER, Gene Dieble Landscaping </h3>
-            <p className="text-slate-600">MARCH 2016 -AUGUST 2018, DUBOIS, P.A..</p>
+            <h3 className="text-xl text-slate-800 font-semibold">LEAD LANDSCAPER, GENE DIEBLE LANDSCAPING  </h3>
+            <p className="text-slate-600">JANUARY 2016 - AUGUST 2018, DUBOIS, P.A.</p>
             <ul className="list-disc list-inside text-slate-600">
               <li>Managed and oversaw landscaping projects directly under the owner.</li>
               <li>Maintained high quality standards, kept coworkers on task </li>
