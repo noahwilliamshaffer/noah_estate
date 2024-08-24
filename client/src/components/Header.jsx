@@ -21,17 +21,17 @@ function Header() {
         <ul className='flex gap-4'>
           <Link to='/'> 
             <li className='hidden sm:inline text-slate-700 hover:underline'>
-              Home
+              Meet the brothers
             </li>
           </Link>
           <Link to='/AppDescription'> 
             <li className='hidden sm:inline text-slate-700 hover:underline'>
-              Project 
+              Schedule
             </li>
           </Link>
           <Link to='/about'> 
             <li className='hidden sm:inline text-slate-700 hover:underline'>
-              Resume
+              Contact
             </li>
           </Link>
           <Link to='/profile'>
