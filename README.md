@@ -1,8 +1,3 @@
-# MERN Real Estate Marketplace
-
-Welcome to the MERN Real Estate Marketplace, a modern, full-stack application built with MongoDB, Express.js, React, and Node.js. This project showcases an advanced real estate marketplace platform equipped with JWT authentication, Redux Toolkit for state management, and various user-friendly features aimed at providing a seamless experience for managing real estate listings.
-
-## Features
 
 - **Advanced Authentication**: Utilizes JWT for secure login sessions, along with Firebase and Google OAuth for diversified authentication options.
 - **CRUD Operations**: Full support for creating, reading, updating, and deleting real estate listings.
