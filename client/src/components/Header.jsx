@@ -11,7 +11,7 @@ function Header() {
         <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
         <Link to='/'> 
           <span className='text-slate-500'>Two Broke</span>
-          <span className='text-slate-700'>Brothers</span>
+          <span className='text-slate-700'>Brothers LLC</span>
           </Link>
         </h1>
         <form className='bg-slate-100 rounded-lg flex items-center'>
@@ -26,7 +26,7 @@ function Header() {
           </Link>
           <Link to='/AppDescription'> 
             <li className='hidden sm:inline text-slate-700 hover:underline'>
-              Schedule
+              Schedule Session
             </li>
           </Link>
           <Link to='/about'> 
