@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -10,13 +9,13 @@ import ListingItem from '../components/ListingItem';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-
 export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
   const [saleListings, setSaleListings] = useState([]);
   const [rentListings, setRentListings] = useState([]);
+  
   SwiperCore.use([Navigation]);
-  console.log(offerListings);
+
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
@@ -28,6 +27,7 @@ export default function Home() {
         console.log(error);
       }
     };
+
     const fetchRentListings = async () => {
       try {
         const res = await fetch('/api/listing/get?type=rent&limit=4');
@@ -45,53 +45,82 @@ export default function Home() {
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
-        log(error);
+        console.log(error);
       }
     };
+
     fetchOfferListings();
   }, []);
+
   return (
     <div>
-      {/* top */}
+      {/* Videos Section */}
+      <div className='flex flex-col gap-6 p-6 max-w-6xl mx-auto'>
+        <h2 className='text-slate-700 font-bold text-2xl lg:text-4xl text-center mb-8'>
+          Watch Our Tennis Coaches in Action
+        </h2>
+        <div className='flex flex-col gap-8'>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/-K3UTSn0imI"
+            title="Coach Video 1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className='mx-auto'
+          ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/h-SKvw3DBa4"
+            title="Coach Video 2"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className='mx-auto'
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Top Section */}
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
         <h1 className='text-slate-700 font-bold text-3xl lg:text-6xl'>
           Find your next <span className='text-slate-500'>perfect</span>
           <br />
-          place with ease
+          stroke with ease
         </h1>
         <div className='text-gray-400 text-xs sm:text-sm'>
-        An example of what of a potential website I could arrange for you.
+          Our coaches will have you hitting dingers in no time. 
           <br />
-          Users can upload and post properties from their google accounts and messege each other for inquiries. 
-
+          Feel free to upload your own tennis pics that can be seen on the website.
         </div>
         <Link
           to={'/search'}
           className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
         >
-          Let's get started...
+          Let's get scheduled...
         </Link>
       </div>
 
-      {/* swiper */}
+      {/* Swiper Section */}
       <Swiper navigation>
-  {offerListings &&
-    rentListings.length > 0 &&
-    rentListings.map((listing) => (
-      <SwiperSlide key={listing._id}> {/* key moved to SwiperSlide */}
-        <div
-          style={{
-            background: `url(${listing.imageUrls[0]}) center no-repeat`,
-            backgroundSize: 'cover',
-          }}
-          className='h-[500px]'
-        ></div>
-      </SwiperSlide>
-    ))}
-</Swiper>
+        {offerListings &&
+          rentListings.length > 0 &&
+          rentListings.map((listing) => (
+            <SwiperSlide key={listing._id}>
+              <div
+                style={{
+                  background: `url(${listing.imageUrls[0]}) center no-repeat`,
+                  backgroundSize: 'cover',
+                }}
+                className='h-[500px]'
+              ></div>
+            </SwiperSlide>
+          ))}
+      </Swiper>
 
-      {/* listing results for offer, sale and rent */}
-
+      {/* Listing Results Section */}
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10'>
         {offerListings && offerListings.length > 0 && (
           <div className=''>
