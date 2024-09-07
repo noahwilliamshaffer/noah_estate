@@ -1,18 +1,19 @@
 import React from 'react';
+import '../css/About.css';
 
 export default function About() {
   const coaches = [
     {
-      name: 'Coach John Doe',
-      phone: '123-456-7890',
-      email: 'john.doe@example.com',
-      image: 'https://via.placeholder.com/200' // Replace with actual image URL
+      name: 'Alex Haizel',
+      phone: '708-912-7656',
+      email: 'Astm51@sbcglobal.net',
+      image: '/images/oldstroke.jpg' // Correct path to the image
     },
     {
-      name: 'Coach Mike Doe',
-      phone: '098-765-4321',
-      email: 'mike.doe@example.com',
-      image: 'https://via.placeholder.com/200' // Replace with actual image URL
+      name: 'Tyler Hazel',
+      phone: '708-986-2254',
+      email: 'Thaze22@sbcglobal.net',
+      image: '/images/headband.jpg' // Correct path to the image
     }
   ];
 
