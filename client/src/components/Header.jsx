@@ -24,7 +24,7 @@ function Header() {
               Meet the brothers
             </li>
           </Link>
-          <Link to='/AppDescription'> 
+          <Link to='/search'> 
             <li className='hidden sm:inline text-slate-700 hover:underline'>
               Schedule Session
             </li>

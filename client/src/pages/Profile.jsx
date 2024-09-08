@@ -168,8 +168,12 @@ export default function Profile() {
         <input type="password" placeholder='password' id='password' name='password' className='border p-3' onChange={handleChange} />
         <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' type='submit'>{loading ? 'Loading...' : 'update'}</button>
 
-      <Link className = 'bg-green-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' to={"/create-listing"}>Create Listing </Link>
+        {currentUser.email === 'noahwilliamshaffer@gmail.com' && (
+        <Link className = 'bg-green-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80' to={"/create-listing"}>Create Coaching Time </Link>
+        )}
+
       </form> 
+
 
 
       <div className='flex justify-between mt-5'>
