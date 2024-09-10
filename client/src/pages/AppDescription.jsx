@@ -1,12 +1,22 @@
-import React from 'react';
+// Filename - App.js
 
-const AppDescription = () => {
-  return (
-    <div className="max-w-4xl mx-auto my-10 p-5">
-      
+import React, { useState, useCallback } from "react";
+import { Calendar } from "@natscale/react-calendar";
 
-    </div>
-  );
-};
+export default function CalendarGfg() {
+    const [value, setValue] = useState();
 
-export default AppDescription;
+    const onChange = useCallback(
+        (value) => {
+            setValue(value);
+        },
+        [setValue]
+    );
+
+    return (
+        <div>
+            <h1>Select a day</h1>
+            <Calendar value={value} onChange={onChange} />
+        </div>
+    );
+}
