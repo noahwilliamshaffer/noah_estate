@@ -8,12 +8,23 @@ export default function CalendarGfg() {
     const [isPopupVisible, setPopupVisible] = useState(false); // State for popup visibility
     const [formData, setFormData] = useState({ name: "", description: "" }); // State for form input
 
+    // Get current date and set the minimum date to one day after today
+    const today = new Date();
+    const minSelectableDate = new Date(today);
+    minSelectableDate.setDate(today.getDate() + 1); // Set to one day after today
+
     const onChange = useCallback(
         (value) => {
+            // Prevent date selection if it's before the minimum selectable date
+            if (value < minSelectableDate) {
+                alert("You cannot select a past date.");
+                return;
+            }
+
             setValue(value);
             setPopupVisible(true); // Show popup when a day is clicked
         },
-        [setValue]
+        [setValue, minSelectableDate]
     );
 
     const handleClose = () => {
@@ -56,10 +67,30 @@ export default function CalendarGfg() {
         }));
     };
 
+    // Disable back button on calendar by checking if the current month is the same as today's month
+    const handleNavigationDisabled = ({ activeStartDate }) => {
+        const currentDate = new Date();
+        return activeStartDate.getMonth() <= currentDate.getMonth() && activeStartDate.getFullYear() === currentDate.getFullYear();
+    };
+
     return (
         <div>
             <h1>Select a day</h1>
-            <Calendar value={value} onChange={onChange} />
+            <Calendar 
+                value={value} 
+                onChange={onChange} 
+                // Prevent navigation backward to previous months
+                onActiveStartDateChange={({ activeStartDate }) => {
+                    const isCurrentMonthOrLater =
+                        activeStartDate.getMonth() >= today.getMonth() &&
+                        activeStartDate.getFullYear() >= today.getFullYear();
+                    if (!isCurrentMonthOrLater) {
+                        alert("You cannot navigate to previous months.");
+                        return;
+                    }
+                }}
+                showNavigation={true}
+            />
 
             {isPopupVisible && (
                 <div style={popupStyle}>
@@ -138,4 +169,3 @@ const buttonStyle = {
     borderRadius: "5px",
     cursor: "pointer",
 };
-
