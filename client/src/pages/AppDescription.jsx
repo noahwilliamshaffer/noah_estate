@@ -1,7 +1,8 @@
 // Filename - App.js
-
 import React, { useState, useCallback } from "react";
 import { Calendar } from "@natscale/react-calendar";
+import '../css/Schedule.css';
+// Filename - AppDescription.jsx
 
 export default function CalendarGfg() {
     const [value, setValue] = useState();
@@ -11,20 +12,22 @@ export default function CalendarGfg() {
     // Get current date and set the minimum date to one day after today
     const today = new Date();
     const minSelectableDate = new Date(today);
+    const maxSelectableDate = new Date(today);
     minSelectableDate.setDate(today.getDate() + 1); // Set to one day after today
+    maxSelectableDate.setDate(today.getDate() + 14); // Set to 14 days after today
 
     const onChange = useCallback(
         (value) => {
-            // Prevent date selection if it's before the minimum selectable date
-            if (value < minSelectableDate) {
-                alert("You cannot select a past date.");
+            // Prevent date selection if it's before the minimum selectable date or after the maxSelectableDate
+            if (value < minSelectableDate || value > maxSelectableDate) {
+                alert("You cannot select a past date or more than two weeks ahead.");
                 return;
             }
 
             setValue(value);
             setPopupVisible(true); // Show popup when a day is clicked
         },
-        [setValue, minSelectableDate]
+        [setValue, minSelectableDate, maxSelectableDate]
     );
 
     const handleClose = () => {
@@ -67,27 +70,22 @@ export default function CalendarGfg() {
         }));
     };
 
-    // Disable back button on calendar by checking if the current month is the same as today's month
-    const handleNavigationDisabled = ({ activeStartDate }) => {
-        const currentDate = new Date();
-        return activeStartDate.getMonth() <= currentDate.getMonth() && activeStartDate.getFullYear() === currentDate.getFullYear();
-    };
-
     return (
         <div>
             <h1>Select a day</h1>
             <Calendar 
                 value={value} 
-                onChange={onChange} 
-                // Prevent navigation backward to previous months
-                onActiveStartDateChange={({ activeStartDate }) => {
-                    const isCurrentMonthOrLater =
-                        activeStartDate.getMonth() >= today.getMonth() &&
-                        activeStartDate.getFullYear() >= today.getFullYear();
-                    if (!isCurrentMonthOrLater) {
-                        alert("You cannot navigate to previous months.");
-                        return;
+                onChange={onChange}
+                // Highlight selectable dates
+                tileClassName={({ date }) => {
+                    if (date >= minSelectableDate && date <= maxSelectableDate) {
+                        return 'highlight'; // This class is defined in the App.css file
                     }
+                    return null;
+                }}
+                tileDisabled={({ date }) => {
+                    // Disable dates that are either before the minimum selectable date or after the maximum selectable date
+                    return date < minSelectableDate || date > maxSelectableDate;
                 }}
                 showNavigation={true}
             />
